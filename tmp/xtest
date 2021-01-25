@@ -1,0 +1,20 @@
+#!/bin/bash
+
+ee="/opt/easyengine/sites"
+backup="/home/backups"
+sites=$(ls $ee)
+
+date=`date +%d%m%Y-%H%M%S`
+slin="------------------------------------"
+
+clear
+mkdir -p $backup
+
+echo "List"
+echo $slin
+for i in $sites
+do
+	echo $i @ $date
+done
+echo $slin
+echo ""
